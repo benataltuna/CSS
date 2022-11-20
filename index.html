@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="eu">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSS aurkezpena</title>
+
+		<meta name="description" content="CSS aurkezpena Batx1">
+		<meta name="author" content="Beñat Altuna">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beltza.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/800px-CSS3_logo_and_wordmark.svg.png" alt="css logo" style="height: 450px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+					<!--Ezkutatzeko-->
+					<section data-visibility="hidden">
+						<div data-id="box" style="width: 25%; height: 50px; background: #13DAEC; float:left; position:absolute"></div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>ZER DA CSS?</h2>
+						 <div class="row">
+							<div class="column">
+								<ul>
+									<li>Web baten estiloa aldatzeko erabiltzen den tresna da.</li>
+									<li>Helburu nagusia dokumentu baten edukia eta aurkezpena bereiztea da.</li>
+									<li>Lana aurrezten du, orri askori estiloa batera aldatzea posible delako.</li>
+									<li>Webgunearen irisgarritasuna hobetzen laguntzen du.</li>
+								</ul>
+							</div>
+							<div class="column" style="display:grid; align-items: center;">
+								<pre data-id="code-animation">
+								<code class="hljs css" data-trim data-line-numbers>
+									body {
+									  background-color: lightblue;
+									}
+
+									h1 {
+									  color: white;
+									  text-align: center;
+									}
+
+									p {
+									  font-family: verdana;
+									  font-size: 20px;
+									}
+								</code>
+								</pre>
+							</div>	
+						</div> 	
+					</section>
+					<section>
+						<div class="row">
+							<div class="column">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/HTML5_logo_resized.svg/424px-HTML5_logo_resized.svg.png?20141116201733" alt="html logo" style="height: 100px; margin: 0 auto 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">
+							</div>
+							<div class="column">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/HTML5_logo_resized.svg/424px-HTML5_logo_resized.svg.png?20141116201733" alt="html logo" style="height: 100px; margin: 0 auto 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">
+								<!--<img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/plus-icon.png" alt="html logo" style="height: 50px; margin: 0 0 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">-->
+								<h1 style="display:inline;">+</h1>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/800px-CSS3_logo_and_wordmark.svg.png" alt="css logo" style="height: 100px; margin: 0 auto 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">
+
+							</div>	
+						</div>
+						<div class="row">
+							<div class="column">
+								<h3>Kaixo Mundua</h3>
+							</div>
+							<div class="column">
+								<h3 style="font-family: Impact; color:black; background-color:#5acade;">Kaixo Mundua</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column">
+								<pre data-id="code-animation">
+								<code class="hljs css" data-trim data-line-numbers>
+									<p>KAIXO MUNDUA</p>
+								</code></pre>
+							</div>
+							<div class="column">
+								<pre data-id="code-animation">
+								<code class="hljs css" data-trim data-line-numbers>
+									<p>KAIXO MUNDUA</p>
+									
+									p{
+										font-family: Impact;
+										color:black;
+										background-color:#5acade;
+									}
+								</code></pre>
+							</div>
+						</div>					
+					</section>
+					<section id="themes">
+						<h2>Itxurak</h2>
+						<p>
+							Hurrengo adibidean CSS fitxategi ezberdina erabiliaz webgune baten itxura nola aldatu ikusiko dugu.</p>
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beltza.css'); return false;">Beltza</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Urdina</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Horia</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>NOLA TXERTATU ESTILOA </h2>
+						<h3>1. Elementuan bertan</h3>
+						<p>Style atributua erabiliz. Ez da egokia elementuak banaka-banaka etiketatu behar baitira. Zaila da webgunean estilo koherentea mantentzea eta aldaketak egin nahi baditugu kostu handia du.</p>
+						<pre data-id="code-animation">
+							<code class="hljs html" data-trim data-line-numbers>
+								<h1 style="color:blue; margin-left:30px;">Izenburua</h1>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>2. HTML orrialdean bertan</h3>
+						<p>CSS kodea HTML fitxategiko goiburuan (head) definitzen da, &lt;style&gt; &lt;/style&gt; etiketen artean.</p>
+						<pre data-id="code-animation">
+							<code class="hljs html" data-trim data-line-numbers>
+								<style>
+									body {
+									background-color: linen;
+									}
+									h1 {
+									color: maroon;
+									margin-left: 40px;
+									}
+								</style>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>3. Kanpoko fitxategi batean</h3>
+						<p>Kasu honetan CSSa, style.css moduko dokumentu batean definitzen da, HTML dokumentutik kanpo eta ondoren HTML dokumentuen burukoan lotura egiten da. Hau
+							erabilita erraza da webgune osoan (HTML ezberdinak) itxura koherentea izatea bai eta aldaketak modu erraz eta erosoan egitea.</p>
+						<pre data-id="code-animation">
+							<code class="hljs html" data-trim data-line-numbers>
+								<style>
+									<link rel="stylesheet" type="text/css" href="mystyle.css">
+								</style>
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section>
+					<h2>Sintaxia</h2>
+					<div class="row">
+							<div class="column">
+								<pre data-id="code-animation">
+								<code class="hljs css" data-trim data-line-numbers>
+									elementua {
+										propietatea: balioa;
+										propietatea: balioa;
+										}
+								</code>
+								</pre>
+							</div>
+							<div class="column" style="display:grid; align-items: center;">
+								<pre data-id="code-animation">
+								<code class="hljs css" data-trim data-line-numbers>
+									h1 {
+										color:blue;
+										font-size: 14pt;
+										}
+								</code>
+								</pre>
+							</div>	
+						</div> 				
+					<ul>
+						<li>Elementuari aplikatzen zaizkion deklarazioak {} artean joan behar dira.</li>
+						<li>Deklarazio bat beti ";" amaitzen da.</li>
+						<li>Propietate eta balio artean beti ":" idatzi behar da.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>OHARRAK</h2>
+					<ul>
+						<li>Oharrak disenatzailearentzako laguntza dira.</li>
+						<li>Web nabigatzaileak ez ditu interpretatzen, beraz ez dira pantailan agertuko.</li>
+						<li>Oharrak /* */ artean idatzi behar dira.</li>
+					</ul>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						/* Hau ohar bat denez, nabigatzaileak ez du interpretatuko */
+						h1 {
+							color: blue; /* Letrak urdinez */
+							font-size: 14pt; /* Letra tamaina 14pt */
+						}
+					</code>
+					</pre>
+				</section>
+				<section>
+					<section>
+						<h2>Hautatzaileak</h2>
+						<p>Deklarazioak zein elementuri aplikatuko zaizkion zehazten du.</p>
+						<p>Hautatzaile motak</p>
+						<div class="row">
+								<div class="column">
+									<h4>Elementu izena</h4>
+									<pre data-id="code-animation">
+									<code class="hljs css" data-trim data-line-numbers>
+										p {} 
+										h1 {} 
+									</code></pre>
+								</div>
+								<div class="column">
+									<h4>id</h4>
+									<pre data-id="code-animation">
+									<code class="hljs css" data-trim data-line-numbers>
+										#goian {} 
+										#indizea {}
+									</code></pre>
+								</div>
+								<div class="column">
+									<h4>class</h4>
+									<pre data-id="code-animation">
+									<code class="hljs css" data-trim data-line-numbers>
+										.garrantzitsua {} 
+										.mezua {}
+									</code></pre>
+								</div>
+						</div>
+					</section>
+					<section>
+						<h3>ELEMENTU ETA CLASS KONBINAZIOA</h3>
+						<p>Propietateak class atributuaren balioa garratzitsua duten paragrafoei aplikatzen zaizkie.</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							p.garrantzitsua{
+								font-size: 14pt;
+							}
+						</code></pre>
+						<br>
+						<h3>ELEMENTU BATEN BARNEKO ELEMENTUA</h3>
+						<p>Propietateak zerrenda baten barnean dauden estekei aplikatzen zaizkie.</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							li a{
+								text-decoration:none;
+							} 
+						</code></pre>
+						
+					</section>
+				</section>
+				<section>
+					<section data-transition="slide" Data-background-transition="zoom">
+					<h2>BACKGROUND</h2>
+					<p>Background propietatea erabiliko dugu elementuen fondoa aldatzeko.</p>
+					<p>Propietate honekin orrialdearen fondoa, taula batena, paragrafo batena etab aldatu genitzake.</p>
+
+					<div class="row">
+							<div class="column">
+								<h4>Kolorea aldatzeko</h4>
+									<pre><code class="hljs css">
+background-color: red;
+background-color: #00ff00;
+									</code></pre>
+							</div>
+							<div class="column">
+								<h4>Irudi bat jartzeko</h4>
+									<pre><code class="hljs css">
+background-image: url("helbidea");
+background-image: url("ona.jpg");
+									</code></pre>
+							</div>
+					</section>
+					<section data-transition="slide" data-background-transition="zoom">
+						<h2>BACKGROUND</h2>
+						<p>Erlazionatutako beste propietate batzuk:
+						<ul>
+							<li>background-position: Fondoko irudia non kokatu behar den zehazten du.</li>
+							<li>background-repeat: Fondoko irudia errepikatu behar den edo ez zehazten du.</li>
+							<li>background-attachment: Fondoko irudia finko utzi behar dugun zehazten du.</li>
+						</ul>
+						<br>
+					</section>
+				</section>
+				<section>
+					<h2>KUTXA EGITURA</h2>
+					<p>HTML elementuak kutxa moduan ikus genitzake. Ondorengoa azpielementuek osatzen dute HTML elementu bat:</p>
+					<img src="https://lh6.googleusercontent.com/dVK4zuAMPhckKPAqG3rpmOh2zXyo8Ed-QZUA2Z4z6OsGdnpO38py9rE7gWyaRuuaOrFKNbbvd4y0uIcQYZWJVIx4TKVHbA5g7GnlRkY6VueYgoayHhsQJWyQ-pzleMj4KdMrmBjS" alt="padding-margin" style="height: 200px; margin: 10px auto 10px auto; background: transparent;" class="demo-logo">
+					<p>Elementuaren neurriak kalkulatzeko, azpielementu bakoitzaren neurriak batu behar dira.</p>
+				</section>
+				<section>
+					<h2>MARGINAK</h2>
+					<p>Elementu baten alboan jarri behar den espazioa (ertzetik kanpo)</p>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						margin-top: 100px;
+						margin-left: 5%;
+						margin-right: inherit; /*Bere gurasoaren margin berdina*/
+					</code></pre>
+				</section>
+				<section>
+					<section data-transition="slide" data-background-transition="zoom">
+					<h2>BORDER</h2>
+					<p>Elementu ezberdinen ertzak aldatu daitezke. (4 berdin edo ezberdin)</p>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						p {
+							border-style: solid, dotted, double, etab;
+							border-width: 5px;
+							border-color: green;
+							}
+						p {
+							border: solid 5px green;
+						}
+						p {
+							border-left: dotted 3px blue;
+						}
+					</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>PADDINGA</h2>
+					<p>Elementu baten eta bere ertzaren artean dagoen tartea.</p>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						img {
+							padding-top:100px;
+							padding-left: 5%;
+							padding-right: inherit; /*Bere gurasoaren padding berdina*/
+						}
+					</code></pre>
+				</section>
+				<section>
+					<h2>ERTZAK</h2>
+					<p>Elementu ezberdinen ertzak aldatu daitezke. (4 berdin edo ezberdin)</p>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						p {
+							border-style: solid;
+							border-width: 5px;
+							border-color: green;
+						}
+						
+					</code></pre>
+					<p>Ertz bakarra aldatu nahi bada</p>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						p {
+							border: solid 5px green;
+						}
+					</code></pre>
+				</section>
+				<section>
+					<h2>TESTUA</h2>
+					<pre data-id="code-animation">
+					<code class="hljs css" data-trim data-line-numbers>
+						p {
+							color: green - #FFFFFF; /*Kolorea*/
+							
+							text-align: right / left / center / justify /; /*Testua alineatzeko*/
+							
+							text-decoration: underline / overline ; /*Azpimarra - Goimarra */
+							
+							font-weight: bold ; /*Belztua*/
+							
+							font-style: italic ; /* Etzana*/
+							
+							font-family: "Arial", "ComicSans MS"; /* Letra mota */
+							
+							font-size: 12pt / 14px / 3em / 150%; /* Letra tamaina */
+						}					
+					</code></pre>
+				</section>
+				<section>
+					<section>
+						<h2>ESTEKAK</h2>
+						<p>Lau egoera ezberdinetan egon daiteke:</p>
+						<ul>
+							<li>a:link: Normal, hau da, bisitatu edo klik egin gabe dagoenean.</li>
+							<li>a:visited: Jada bisitatu dugun esteka bat.</li>
+							<li>a:hover: Kurtsorea estekaren gainean dugunean.</li>
+							<li>a:active: Klikatua den momentuan.</li>
+						</ul>
+						<p>a:hover beti a:link eta a:visited ondoren definitu behar da eta a:active beti a:hover ondoren.</p>
+					</section>
+					<section>
+						<h3>ESTEKAK</h3>
+						<p>Bi propietate nagusi ditugu esteka baten itxura aldatzeko.</p>
+						<ul>
+							<li>text-decoration: Orokorrean azpimarraketa jarri edo kentzeko erabiltzen da.</li>
+							<li>background-color: Estekaren atzeko fondoaren kolorea aldatzeko erabiltzen da.</li>
+						</ul>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							a:hover{
+								text-decoration: none / underline;
+								background-color: blue;
+							}
+						</code></pre>
+						<p>a:hover beti a:link eta a:visited ondoren definitu behar da eta a:active beti a:hover ondoren.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>ZERRENDAK</h2>
+						<p>Bi zerrenda mota ezberdin ditugu HTMLn, &lt;ol&gt; edo buleta bidezko zerrenda(-, &bull;...) eta &lt;ul&gt; edo zerrenda ordenatuak (123, abc...)</p>
+						<p>list-style-type erabiliz zerrenda horien buleta edo ordena aldagaia definitu daiteke.</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							ul {
+								list-style-type: circle/square….;
+							}
+							ol {
+								list-style-type: upper-roman/lower-alpha…;
+							}
+						</code></pre>
+					</section>
+					<section>
+						<h2>ZERRENDAK</h2>
+						<p>list-style-image erabiliz buletaren irudia defini daiteke.</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							ul {
+								list-style-image: url("puntua.gif");
+							}
+							ol {
+								list-style-type: upper-roman/lower-alpha…;
+								list-style-position: inside;
+							}
+						</code></pre>
+						<p>list-style-position listako elementu bakoitzaren lerro guztiak sangria erabiliz barrurago edo kanpoan agertzeko erabiltzen da</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>TAULAK</h2>
+						<p>Taulei estiloa emateko garaian erabiltzen diren propietate nagusiak honako hauek dira:</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							td {
+								border: 1px black solid;
+								width: 50%;
+								height: 75%;
+								text-align: center;
+								vertical-align: middle;
+								padding: 10px;
+								border-collapse: collapse;
+							}
+						</code></pre>
+					</section>
+					<section>
+						<h2>TAULAK</h2>
+						<p>Esteketan bezala taulako elementu baten gainetik pasatzean fondoa aldatzeko aukera ere badago:</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							tr:hover {
+								background-color: #5acade;
+							}
+						</code></pre>
+						<br>
+						<table class="adb">
+							<thead>
+								<tr>
+									<th>Elementua</th>
+									<th>Prezioa</th>
+									<th>Kopurua</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Sagarrak</td>
+									<td>1€</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>Platanoak</td>
+									<td>2€</td>
+									<td>18</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>DIV</h2>
+						<p>div bat kutxa moduko bat da eta bere barnean HTML elementuak (paragrafoak, irudiak, beste div batzuk...) txertatu daitezke.</p>
+						<p>Orrialdeen egitura diseinatzeko erabiltzen dira.</p>
+						<img src="https://www.arkaitzgarro.com/html5/images/cap02/html4.png" alt="css logo" style="height: 300px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+					<section>
+						<h2>DIV</h2>
+						<p>Tamainarekin lotutako ondorengo propietateak ditugu:</p>
+						<pre data-id="code-animation">
+						<code class="hljs css" data-trim data-line-numbers>
+							.row {
+								width: 20%; /* elementuaren zabalera */
+								max-width: 500px; /* zabalera maximoa */
+								height: 200px; /* elementuaren altuera */
+								max-height: 20%; /* altuera maximoa) */
+							}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>ELEMENTUAK KOKATZEN</h2>
+					<p>Float propietatearekin elementuak mugitu genitzake bere inguruan beste html etiketak jarri ahal izateko.</p>
+					<img src="https://webtursos.s3.amazonaws.com/web/files/floatclear3.jpg" alt="css logo" style="height: 300px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</section>
+				<section>
+					<section>
+					<h2>ARGIBIDE GEHIAGO</h2>
+					<a href="http://www.w3schools.com/css/css_background.asp" target="blank_">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/W3Schools_logo.svg" alt="w3schools-logo" style="height: 200px; margin-top:20px;" class="demo-logo">
+					</a>
+					<br>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="blank_">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/MDN_Web_Docs.svg/2560px-MDN_Web_Docs.svg.png" alt="mozilla-developer-logo" style="height: 100px;" class="demo-logo">
+					</a>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
